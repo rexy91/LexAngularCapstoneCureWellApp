@@ -25,7 +25,27 @@ export class AddDoctorComponent implements OnInit {
   }
 
   addDoctor(doctorName: string) {
-   //To do implement necessary logic
+    this._curewellService.addDoctor(doctorName).subscribe(
+      response => {
+        this.status = response
+        if(this.status)
+        {     
+          this.showDiv = true; 
+          this.msg = 'Doctor added successfully.'
+        }
+        else
+        {
+          // If this.status = false, means backend method logic is wrong, but the post fetch was good. 
+          this.showDiv = true; 
+          this.msg = 'Doctor was not added.'
+        }
+      },
+      // If there is fetching error, if fetch is good, backend action/api method is hit, this won't show. 
+      error => {
+          this.errorAddMsg=error; 
+          alert("Some error occured while communicating with backend ") 
+          console.log(this.errorAddMsg); 
+      }
+    )
   }
-
 }

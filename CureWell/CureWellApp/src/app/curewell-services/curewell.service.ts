@@ -39,8 +39,14 @@ export class CurewellService {
 
   //AddDoctor
   addDoctor(doctorName: string): Observable<boolean> {
-    //To do implement necessary logic
-    return null;
+    // backend is expecting an object 
+    let docObj = {
+      doctorName: doctorName // this key should match backend model property. Not case sensitive. 
+    }
+                              // 2nd argument of post/put, we can only pass object like. 
+                              // Either a whole object
+                              // Or { key:values } 
+    return this.http.post<boolean>('http://localhost:50476/api/CureWell/addDoctor', docObj).pipe(catchError(this.errorHandler))
   }
 
   //EditDoctor
