@@ -11,11 +11,11 @@
         <th style="text-align:center" colspan="2">Action</th>
       </tr>
 
-      <tr style="background-color:white">
-        <!--Add your logic here-->
-
-        <td> <button class="btn">Edit Doctor Details</button></td>
-        <td> <button class="btn">Delete Doctor Details</button></td>
+      <tr style="background-color:white" *ngFor="let doctor of doctorList">
+        <td>{{doctor.doctorId}}</td>
+        <td>{{doctor.doctorName}}</td>
+        <td> <button class="btn">Edit Doctor Details</button> </td>
+        <td> <button class="btn">Delete Doctor Details</button> </td>
       </tr>
     </table>
 

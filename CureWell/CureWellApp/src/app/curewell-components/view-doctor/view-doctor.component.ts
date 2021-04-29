@@ -20,11 +20,25 @@ export class ViewDoctorComponent implements OnInit {
   constructor(private _curewellService: CurewellService, private router: Router) { }
 
   ngOnInit() {
-    //To do implement necessary logic
+    
+    // if component loaded, call getDoctor to render doctors from backend. 
+    this.getDoctor()
   }
 
   getDoctor() {
     //To do implement necessary logic
+    this._curewellService.getDoctors().subscribe(
+      response => {
+        this.doctorList = response
+        this.showMsgDiv = false
+        console.log("Doctors fetched successfully.")
+      },
+      error => {
+        this.doctorList = null
+        this.errorMsg = error
+      }
+
+    )
   }
 
   editDoctorDetails(doctor: Doctor) {

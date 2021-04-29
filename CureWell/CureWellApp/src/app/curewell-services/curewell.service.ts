@@ -21,8 +21,8 @@ export class CurewellService {
   
   //GetDoctor
   getDoctors(): Observable<Doctor[]> {
-    //To do implement necessary logic
-    return null;
+    let tempVar = this.http.get<Doctor[]>('http://localhost:50476/api/CureWell/getDoctors').pipe(catchError(this.errorHandler)); 
+    return tempVar;
   }
 
   //GetSpecialization
