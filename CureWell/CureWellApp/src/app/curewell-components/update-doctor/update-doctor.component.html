@@ -1,7 +1,7 @@
 <div class="myContent">
   <div class="container">
     <!--Add angular form logic here-->
-    <form #updateDoctorForm>
+    <form #updateDoctorForm='ngForm' (submit)="editDoctorDetails(updateDoctorForm.value.doctorname)">
       <h2 style="text-align:center">Update Doctor</h2>
       <h6 style="text-align:center;color:dimgrey;font-size:small">All fields are mandatory</h6>
       <table align="center">
@@ -18,8 +18,12 @@
           <th align="justify"> <label>Doctor Name</label> </th>
           <th>
             <!--Add angular form logic here-->
-            <input type="text" class="form-control qkinput" name="doctorname" #doctorname>
+            <input type="text" class="form-control qkinput" name="doctorname" #doctorname='ngModel' ngModel required>
             <!--Add your validation logic here-->
+            <!-- Only wants to show name is required when input is empty AND its touched(mouse clicked, input is highlighted) / dirty(value has changed) -->
+            <div *ngIf="doctorname.errors && (doctorname.touched || doctorname.dirty)" style="color:red">
+                Doctor name is required. 
+            </div>
           </th>
         </tr>
         <tr></tr>

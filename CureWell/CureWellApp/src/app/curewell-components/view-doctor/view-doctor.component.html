@@ -14,7 +14,7 @@
       <tr style="background-color:white" *ngFor="let doctor of doctorList">
         <td>{{doctor.doctorId}}</td>
         <td>{{doctor.doctorName}}</td>
-        <td> <button class="btn">Edit Doctor Details</button> </td>
+        <td> <button class="btn" (click)="editDoctorDetails(doctor)" >Edit Doctor Details</button> </td>
         <td> <button class="btn">Delete Doctor Details</button> </td>
       </tr>
     </table>

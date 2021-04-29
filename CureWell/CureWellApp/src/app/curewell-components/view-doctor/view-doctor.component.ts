@@ -42,7 +42,8 @@ export class ViewDoctorComponent implements OnInit {
   }
 
   editDoctorDetails(doctor: Doctor) {
-    //To do implement necessary logic
+    // When edit doctor button is hit, navitage to update doctor component, by passing in data to the dynamic url
+    this.router.navigate([`editDoctorDetails/${doctor.doctorId}/${doctor.doctorName}`]) 
   }
 
   removeDoctor(doctor: Doctor) {

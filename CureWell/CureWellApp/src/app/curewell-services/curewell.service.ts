@@ -51,8 +51,12 @@ export class CurewellService {
 
   //EditDoctor
   editDoctorDetails(doctorId: number, doctorName: string): Observable<boolean> {
-    //To do implement necessary logic
-    return null;
+    // backend is only updating doctorname, but needs to fidn object in database by id, so we need to pass in both.
+    let tempObj = {
+      DOCTORID: doctorId, // to show that case sensitive doens;t matter as logn as frontend key matches backend property name. 
+      doctorName: doctorName
+    }
+    return this.http.put<boolean>('http://localhost:50476/api/CureWell/updateDoctor', tempObj).pipe(catchError(this.errorHandler))
   }
 
   //editSurgery
