@@ -106,3 +106,23 @@ C:\Users\harshit.golechha\Desktop\angular\New folder\To_Trainees\CureWell\CureWe
 C:\Users\harshit.golechha\Desktop\angular\New folder\To_Trainees\CureWell\CureWellServices\obj\Debug\netcoreapp2.1\CureWellServices.csproj.CopyComplete
 C:\Users\harshit.golechha\Desktop\angular\New folder\To_Trainees\CureWell\CureWellServices\obj\Debug\netcoreapp2.1\CureWellServices.dll
 C:\Users\harshit.golechha\Desktop\angular\New folder\To_Trainees\CureWell\CureWellServices\obj\Debug\netcoreapp2.1\CureWellServices.pdb
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellServices\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellServices\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellServices\bin\Debug\netcoreapp2.1\CureWellServices.deps.json
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellServices\bin\Debug\netcoreapp2.1\CureWellServices.runtimeconfig.json
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellServices\bin\Debug\netcoreapp2.1\CureWellServices.runtimeconfig.dev.json
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellServices\bin\Debug\netcoreapp2.1\CureWellServices.dll
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellServices\bin\Debug\netcoreapp2.1\CureWellServices.pdb
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellServices\bin\Debug\netcoreapp2.1\CureWellDataAccessLayer.dll
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellServices\bin\Debug\netcoreapp2.1\CureWellDataAccessLayer.pdb
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellServices\obj\Debug\netcoreapp2.1\CureWellServices.csprojAssemblyReference.cache
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellServices\obj\Debug\netcoreapp2.1\CureWellServices.AssemblyInfoInputs.cache
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellServices\obj\Debug\netcoreapp2.1\CureWellServices.AssemblyInfo.cs
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellServices\obj\Debug\netcoreapp2.1\CureWellServices.csproj.CoreCompileInputs.cache
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellServices\obj\Debug\netcoreapp2.1\CureWellServices.RazorAssemblyInfo.cache
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellServices\obj\Debug\netcoreapp2.1\CureWellServices.RazorAssemblyInfo.cs
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellServices\obj\Debug\netcoreapp2.1\CureWellServices.RazorTargetAssemblyInfo.cache
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellServices\obj\Debug\netcoreapp2.1\CureWellServices.csproj.CopyComplete
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellServices\obj\Debug\netcoreapp2.1\CureWellServices.dll
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellServices\obj\Debug\netcoreapp2.1\CureWellServices.pdb
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellServices\obj\Debug\netcoreapp2.1\CureWellServices.genruntimeconfig.cache

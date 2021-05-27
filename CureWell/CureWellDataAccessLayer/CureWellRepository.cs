@@ -30,6 +30,7 @@ namespace CureWellDataAccessLayer
             {
                 doctors = null;
             }
+       
             return doctors;
         }
 
@@ -55,13 +56,15 @@ namespace CureWellDataAccessLayer
         #endregion
 
         #region GetAllSurgeryTypeForToday - Do not modify the signature
-        public List<Surgery> GetAllSurgeryTypeForToday()
+        public List<Surgery> GetAllSurgery()
         {
             //To Do: Implement appropriate logic and change the return statement as per your logic
             List<Surgery> lstSurgeries = new List<Surgery>();
             try
             {
-                lstSurgeries = (from surgeries in Context.Surgery where surgeries.SurgeryDate == DateTime.Today.Date select surgeries).ToList();
+               
+                lstSurgeries = Context.Surgery.ToList();
+                
             }
             catch (Exception)
             {
@@ -74,7 +77,7 @@ namespace CureWellDataAccessLayer
         #endregion
 
         #region AddDoctor - Do not modify the signature
-        public bool AddDoctor(Doctor dObj)
+        public bool AddDoctor(Doctor dObj) // here is expecting a doctor object of this layer's model type. 
         {
             //To Do: Implement appropriate logic and change the return statement as per your logic
             try
@@ -167,3 +170,6 @@ namespace CureWellDataAccessLayer
 
     }
 }
+
+
+

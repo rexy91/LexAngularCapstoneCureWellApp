@@ -17,188 +17,145 @@ namespace CureWellServices.Controllers
     {
         CureWellRepository rep = new CureWellRepository();
 
-        #region GetDoctor - Do not modify the signature
+        // getDoctors
         [HttpGet]
-        public JsonResult GetDoctors()
+        public JsonResult getDoctors()
         {
-            List<Models.Doctor> listOfDoctors = new List<Models.Doctor>();
+            List<Models.Doctor> docList = new List<Models.Doctor>();
             try
             {
-                var doctorsList = rep.GetAllDoctors();
-                if (doctorsList.Any())
+                var tempList = rep.GetAllDoctors();
+                
+                if(tempList.Any())
                 {
-                    foreach  (var item in doctorsList)
+                    foreach (var item in tempList)
                     {
-                        listOfDoctors.Add(new Models.Doctor()
-                        {
-                            DoctorId=item.DoctorId,
-                            DoctorName=item.DoctorName
-                        }
-                        );
-                    }
-                } 
-            }
-            catch (Exception)
-            {
-                listOfDoctors= null;
-            }
-            return Json(listOfDoctors);
-        }
-        #endregion
-
-        #region GetSpecializations - Do not modify the signature
-        [HttpGet]
-        public JsonResult GetSpecializations()
-        {
-            List<Models.Specialization> listOfSpecialization = new List<Models.Specialization>();
-            try
-            {
-                var specializationList = rep.GetAllSpecializations();
-                if (specializationList.Any())
-                {
-                    foreach (var item in specializationList)
-                    {
-                        listOfSpecialization.Add(new Models.Specialization()
-                        {
-                            SpecializationCode = item.SpecializationCode,
-                            SpecializationName = item.SpecializationName
-                        }
-                        );
+                        docList.Add(new Models.Doctor() { 
+                               DoctorId = item.DoctorId,
+                               DoctorName = item.DoctorName 
+                        });
                     }
                 }
             }
             catch (Exception)
             {
-                listOfSpecialization = null;
-            }
-            return Json(listOfSpecialization);
-        }
-        #endregion
 
-        #region GetAllSurgeryTypeForToday - Do not modify the signature
-        [HttpGet]
-        public JsonResult GetAllSurgeryTypeForToday()
-        {
-            List<Models.Surgery> listOfSurgery = new List<Models.Surgery>();
-            try
-            {
-                var surgeryList = rep.GetAllSurgeryTypeForToday();
-                if (surgeryList.Any())
-                {
-                    foreach (var item in surgeryList)
-                    {
-                        listOfSurgery.Add(new Models.Surgery()
-                        {
-                            DoctorId=item.DoctorId,
-                            EndTime=item.EndTime,
-                            StartTime=item.StartTime,
-                            SurgeryCategory=item.SurgeryCategory,
-                            SurgeryDate=item.SurgeryDate,
-                            SurgeryId=item.SurgeryId
-                        }
-                        );
-                    }
-                }
+                docList = null;
             }
-            catch (Exception)
-            {
-                listOfSurgery = null;
-            }
-            return Json(listOfSurgery);
+            return Json(docList); 
         }
-        #endregion
 
-        #region AddDoctor - Do not modify the signature
         [HttpPost]
-        public bool AddDoctor(Models.Doctor dObj)
+        public bool addDoctor(Models.Doctor dObj)
         {
-            var status = false;
+            bool status = false; 
+               // Frontend is passing in whole object. 
             try
             {
-                CureWellDataAccessLayer.Models.Doctor doctor = new CureWellDataAccessLayer.Models.Doctor();
-                doctor.DoctorName = dObj.DoctorName;
-                status = rep.AddDoctor(doctor);
+                // DAL is expecting a DAL Type Doctor 
+                CureWellDataAccessLayer.Models.Doctor doc = new CureWellDataAccessLayer.Models.Doctor();
+                // Id is columnd id, will will be generated automatially so we dont need to give. 
+                // Here we can do dObj.DoctorName because frontend Doctor model interface has doctorName key, it is not case sensitive, as long as it matches backend property name. 
 
+                doc.DoctorName = dObj.DoctorName;
+                status = rep.AddDoctor(doc);
             }
-            catch(Exception)
+            catch (Exception)
             {
-                status = false;
-            }
-            return status;
-        }
-        #endregion
 
-        #region UpdateDoctorDetails - Do not modify the signature
+                status = false; 
+            }
+            return status; 
+        }
+
+        // Updating doctor details
+        // Here we can't jut declare a Doctory type of DAL, because we need to access the incoming object's attributes.
         [HttpPut]
-        public bool UpdateDoctorDetails(Models.Doctor dObj)
+        public bool updateDoctor(Models.Doctor dObj)
         {
             bool status = false;
             try
             {
-                CureWellDataAccessLayer.Models.Doctor newDoctor = new CureWellDataAccessLayer.Models.Doctor();
-                if (ModelState.IsValid)
+                CureWellDataAccessLayer.Models.Doctor doc = new CureWellDataAccessLayer.Models.Doctor();
+                if (ModelState.IsValid) // If we were able to create a DAL 's Doctor type object 
                 {
-                    newDoctor.DoctorId = dObj.DoctorId;
-                    newDoctor.DoctorName = dObj.DoctorName;
-                    status = rep.UpdateDoctorDetails(newDoctor);
-                }
-            }
-            catch(Exception)
-            {
-                status = false;
-            }
-            return status;
-        }
-        #endregion
+                    // Assign incoming object 's attributes to doc's properties. 
+                    // Here frontend is only updating the name, but also needs to id property in order to look for the object inside dababase. 
+                    // Repo's updatedoc method will find obj in the database by id, then update the name. 
 
-        #region UpdateSurgery - Do not modify the signature
-        [HttpPut]
-        public bool UpdateSurgery(Models.Surgery sObj)
-        {
-            bool status = false;
-            try
-            {
-                CureWellDataAccessLayer.Models.Surgery newSurgery = new CureWellDataAccessLayer.Models.Surgery();
-                if (ModelState.IsValid)
-                {
-                    newSurgery.DoctorId = sObj.DoctorId;
-                    newSurgery.StartTime = sObj.StartTime;
-                    newSurgery.EndTime = sObj.EndTime;
-                    newSurgery.SurgeryCategory = sObj.SurgeryCategory;
-                    newSurgery.SurgeryDate = sObj.SurgeryDate;
-                    newSurgery.SurgeryId = sObj.SurgeryId;
-                    status = rep.UpdateSurgery(newSurgery);
+                    doc.DoctorName = dObj.DoctorName;
+                    doc.DoctorId = dObj.DoctorId; 
+
+                    // Repo method is expecting DAL object, that's why we needed to create one and assign property value with incoming object's key/value. 
+                    status = rep.UpdateDoctorDetails(doc);
+
                 }
             }
             catch (Exception)
             {
+
                 status = false;
             }
             return status;
         }
-        #endregion
 
-        #region DeleteDoctor - Do not modify the signature
-        [HttpDelete]
-        public bool DeleteDoctor(Models.Doctor dObj)
+        // get today's surgeries
+        [HttpGet]
+        public JsonResult getTodaySurgery()
         {
-            bool status = false;
+            List<Models.Surgery> surgeryList = new List<Models.Surgery>();
             try
             {
-                CureWellDataAccessLayer.Models.Doctor doctor = new CureWellDataAccessLayer.Models.Doctor();
-                if (ModelState.IsValid)
+                var tempList = rep.GetAllSurgery();
+                if(tempList.Any())
                 {
-                    doctor.DoctorId = dObj.DoctorId;
-                    doctor.DoctorName = dObj.DoctorName;
-                    status = rep.DeleteDoctor(doctor);
+                    foreach (var item in tempList)
+                    {
+                        surgeryList.Add(new Models.Surgery() { 
+                            SurgeryId = item.SurgeryId,
+                            DoctorId = item.DoctorId,
+                            SurgeryDate = item.SurgeryDate,
+                            EndTime = item.EndTime,
+                            StartTime = item.StartTime,
+                            SurgeryCategory = item.SurgeryCategory
+                        });
+                    }
                 }
             }
             catch (Exception)
             {
-                status = false;
+                surgeryList=null;
             }
-            return status;
+            return Json(surgeryList);
         }
-        #endregion
-    }
+
+        // get specifilizations
+
+        [HttpGet]
+        public JsonResult getSpecs()
+        {
+            List<Models.Specialization> specList = new List<Models.Specialization>();
+            try
+            {
+                var tempList = rep.GetAllSpecializations(); 
+                if(tempList.Any())
+                {
+                    foreach (var item in tempList)
+                    {
+                        specList.Add(new Models.Specialization() { 
+                                SpecializationCode = item.SpecializationCode,
+                                SpecializationName = item.SpecializationName 
+                        });
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                specList = null;
+            }
+            return Json(specList); 
+        }
+
+    } // end of controller class
 }

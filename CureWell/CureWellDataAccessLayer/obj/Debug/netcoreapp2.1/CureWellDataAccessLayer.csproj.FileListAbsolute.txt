@@ -70,3 +70,16 @@ C:\Users\harshit.golechha\Desktop\angular\New folder\To_Trainees\CureWell\CureWe
 C:\Users\harshit.golechha\Desktop\angular\New folder\To_Trainees\CureWell\CureWellDataAccessLayer\obj\Debug\netcoreapp2.1\CureWellDataAccessLayer.AssemblyInfo.cs
 C:\Users\harshit.golechha\Desktop\angular\New folder\To_Trainees\CureWell\CureWellDataAccessLayer\obj\Debug\netcoreapp2.1\CureWellDataAccessLayer.dll
 C:\Users\harshit.golechha\Desktop\angular\New folder\To_Trainees\CureWell\CureWellDataAccessLayer\obj\Debug\netcoreapp2.1\CureWellDataAccessLayer.pdb
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellDataAccessLayer\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellDataAccessLayer\bin\Debug\netcoreapp2.1\CureWellDataAccessLayer.deps.json
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellDataAccessLayer\bin\Debug\netcoreapp2.1\CureWellDataAccessLayer.runtimeconfig.json
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellDataAccessLayer\bin\Debug\netcoreapp2.1\CureWellDataAccessLayer.runtimeconfig.dev.json
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellDataAccessLayer\bin\Debug\netcoreapp2.1\CureWellDataAccessLayer.dll
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellDataAccessLayer\bin\Debug\netcoreapp2.1\CureWellDataAccessLayer.pdb
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellDataAccessLayer\obj\Debug\netcoreapp2.1\CureWellDataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellDataAccessLayer\obj\Debug\netcoreapp2.1\CureWellDataAccessLayer.AssemblyInfo.cs
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellDataAccessLayer\obj\Debug\netcoreapp2.1\CureWellDataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellDataAccessLayer\obj\Debug\netcoreapp2.1\CureWellDataAccessLayer.dll
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellDataAccessLayer\obj\Debug\netcoreapp2.1\CureWellDataAccessLayer.pdb
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellDataAccessLayer\obj\Debug\netcoreapp2.1\CureWellDataAccessLayer.genruntimeconfig.cache
+C:\Users\Yuho\Desktop\Infosys\Vs2019Repos\LexAngularCapstoneCurewell\CureWell\CureWellDataAccessLayer\obj\Debug\netcoreapp2.1\CureWellDataAccessLayer.csprojAssemblyReference.cache

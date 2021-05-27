@@ -15,5 +15,4 @@ export var routing = RouterModule.forRoot([
   { path: 'editDoctorDetails/:doctorId/:doctorName', component: UpdateDoctorComponent },
   { path: 'editSurgery/:doctorId/:endTime/:startTime/:surgeryCategory/:surgeryDate/:surgeryId', component: UpdateSurgeryComponent },
   { path: '**', component: ViewDoctorComponent }
-
 ])

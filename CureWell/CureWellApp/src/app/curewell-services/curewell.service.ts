@@ -27,14 +27,16 @@ export class CurewellService {
 
   //GetSpecialization
   getAllSpecializations(): Observable<Specialization[]> {
-   //To do implement necessary logic
-    return null;
+    let tempVar = this.http.get<Specialization[]>('http://localhost:50476/api/CureWell/getSpecs').pipe(catchError(this.errorHandler)); 
+    return tempVar;
   }
 
   //GetSurgeries
-  getAllSurgeriesForToday(): Observable<Surgery[]> {
-    //To do implement necessary logic
-    return null;
+  getAllSurgeries(): Observable<Surgery[]> {
+    // cast the observable to Surgery[] , so we can return to component.ts 's method. 
+
+    let tempVar = this.http.get<Surgery[]>('http://localhost:50476/api/CureWell/getTodaySurgery').pipe(catchError(this.errorHandler)) 
+    return tempVar;
   }
 
   //AddDoctor

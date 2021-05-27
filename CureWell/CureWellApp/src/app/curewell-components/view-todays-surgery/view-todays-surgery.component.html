@@ -1,5 +1,5 @@
 <h2 align="center">
-  View Today's Surgery
+  View All Surgery
 </h2>
 <div *ngIf="(surgeryList?.length > 0)">
   <div class="table-responsive">
@@ -14,9 +14,7 @@
         <th>Surgery Category</th>
         <th style="text-align:center" colspan="1">Action</th>
       </tr>
-
       <tr *ngFor="let item of surgeryList" style="background-color:white">
-
         <td align="center">{{item.surgeryId}}</td>
         <td align="center">{{item.doctorId}}</td>
         <td align="center">{{item.surgeryDate | date:"dd/MM/yyyy" }}</td>

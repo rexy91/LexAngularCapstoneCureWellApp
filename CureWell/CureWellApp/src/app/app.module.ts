@@ -11,6 +11,7 @@ import { ViewTodaysSurgeryComponent } from './curewell-components/view-todays-su
 import { UpdateSurgeryComponent } from './curewell-components/update-surgery/update-surgery.component';
 import { HttpClient, HttpHeaders, HttpClientModule } from "@angular/common/http";
 import { routing } from './app.routing';
+import { DemoComponentComponent } from './demo-component/demo-component.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { routing } from './app.routing';
     AddDoctorComponent,
     ViewSpecializationComponent,
     ViewTodaysSurgeryComponent,
-    UpdateSurgeryComponent
+    UpdateSurgeryComponent,
+    DemoComponentComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, FormsModule, routing

@@ -13,7 +13,9 @@
 
         <!-- If nothing is input AND input bar is touch or value has changed, show validation message.  -->
         <div *ngIf="doctorNameRef.errors && (doctorNameRef.touhed || doctorNameRef.dirty)" style='color:red'>
-              Doctorname is required.
+            <div [hidden] = "doctorNameRef.errors.required">
+                <p>Name is mandatory.</p>
+            </div>
         </div>
       </th> 
     </tr>
